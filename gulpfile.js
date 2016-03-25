@@ -4,8 +4,9 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var mocha = require("gulp-mocha");
 var istanbul = require("gulp-istanbul");
+var coveralls = require("gulp-coveralls");
 
-gulp.task("default", ["coverage", "coveralls"]);
+gulp.task("default", ["coverage"]);
 
 gulp.task("watch", function () {
   gulp.watch(["lib/**", "test/**"], ["test-no-coverage"]);
@@ -33,7 +34,6 @@ gulp.task("coverage", ["pre-coverage"], function (cb) {
 });
 
 gulp.task("coveralls", ["coverage"], function () {
-  if (!process.env.CI) return;
   return gulp.src("coverage/lcov.info")
     .pipe(coveralls());
 });

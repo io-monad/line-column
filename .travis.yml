@@ -1,5 +1,4 @@
 sudo: false
 language: node_js
-node_js:
-  - "stable"
-  - "0.12"
+script: gulp coverage
+after_success: gulp coveralls
