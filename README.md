@@ -1,6 +1,6 @@
 # line-column
 
-[![Build Status](https://travis-ci.org/io-monad/line-column.svg?branch=master)](https://travis-ci.org/io-monad/line-column)
+[![Build Status](https://travis-ci.org/io-monad/line-column.svg?branch=master)](https://travis-ci.org/io-monad/line-column) [![Coverage Status](https://coveralls.io/repos/github/io-monad/line-column/badge.svg?branch=master)](https://coveralls.io/github/io-monad/line-column?branch=master) [![npm version](https://badge.fury.io/js/line-column.svg)](https://badge.fury.io/js/line-column)
 
 Node module to convert efficiently index to/from line-column in a string.
 
