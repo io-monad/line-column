@@ -77,7 +77,7 @@ lineColumn(testString).fromIndex(33)  // { line: 4, col: 5 }
 lineColumn(testString).toIndex(1, 4)  // 3
 lineColumn(testString).toIndex(4, 5)  // 33
 
-// Shorthand form of .toIndex (compatible with find-line-column)
+// Shorthand of .fromIndex (compatible with find-line-column)
 lineColumn(testString, 33)            // { line:4, col: 5 }
 
 // Object or Array is also acceptable
