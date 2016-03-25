@@ -77,6 +77,14 @@ lineColumn(testString).fromIndex(33)  // { line: 4, col: 5 }
 lineColumn(testString).toIndex(1, 4)  // 3
 lineColumn(testString).toIndex(4, 5)  // 33
 
+// Shorthand form of .toIndex (compatible with find-line-column)
+lineColumn(testString, 33)            // { line:4, col: 5 }
+
+// Object or Array is also acceptable
+lineColumn(testString).toIndex({ line: 4, col: 5 })     // 33
+lineColumn(testString).toIndex({ line: 4, column: 5 })  // 33
+lineColumn(testString).toIndex([4, 5])                  // 33
+
 // You can cache it for the same string. It is so efficient. (See benchmark)
 var finder = lineColumn(testString);
 
