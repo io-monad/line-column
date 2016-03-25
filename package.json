@@ -17,7 +17,7 @@
     "linecol",
     "position"
   ],
-  "main": "line-column.js",
+  "main": "lib/line-column.js",
   "scripts": {
     "test": "gulp test",
     "watch": "gulp watch",
