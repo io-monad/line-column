@@ -1,3 +1,4 @@
 sudo: false
 language: node_js
-script: gulp coverage coveralls
+script: gulp coverage
+after_success: gulp coveralls
