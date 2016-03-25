@@ -21,13 +21,13 @@ describe("LineColumnFinder", function () {
       assert(LineColumnFinder("TEST") instanceof LineColumnFinder);
     });
     it("builds lineToIndex properly", function () {
-      assert.deepStrictEqual(
+      assert.deepEqual(
         LineColumnFinder(testString).lineToIndex,
         [0, 8, 23, 29, 36]
       );
     });
     it("can be shorthand for #fromIndex", function () {
-      assert.deepStrictEqual(LineColumnFinder(testString, 15), { line: 2, col: 8 });
+      assert.deepEqual(LineColumnFinder(testString, 15), { line: 2, col: 8 });
     });
     it("can be called without arguments", function () {
       assert(LineColumnFinder() instanceof LineColumnFinder);
@@ -40,19 +40,19 @@ describe("LineColumnFinder", function () {
       var lineColumn = LineColumnFinder(testString);
 
       it("returns line-column for the first line", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(3), { line: 1, col: 4 });
+        assert.deepEqual(lineColumn.fromIndex(3), { line: 1, col: 4 });
       });
       it("returns line-column for the middle line", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(15), { line: 2, col: 8 });
+        assert.deepEqual(lineColumn.fromIndex(15), { line: 2, col: 8 });
       });
       it("returns line-column for the line containing wide chars", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(33), { line: 4, col: 5 });
+        assert.deepEqual(lineColumn.fromIndex(33), { line: 4, col: 5 });
       });
       it("returns line-column for the last line", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(43), { line: 5, col: 8 });
+        assert.deepEqual(lineColumn.fromIndex(43), { line: 5, col: 8 });
       });
       it("returns line-column for the last character", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(48), { line: 5, col: 13 });
+        assert.deepEqual(lineColumn.fromIndex(48), { line: 5, col: 13 });
       });
 
       it("returns null for an index < 1", function () {
@@ -70,19 +70,19 @@ describe("LineColumnFinder", function () {
       var lineColumn = LineColumnFinder(testString, { origin: 0 });
 
       it("returns line-column for the first line", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(3), { line: 0, col: 3 });
+        assert.deepEqual(lineColumn.fromIndex(3), { line: 0, col: 3 });
       });
       it("returns line-column for the middle line", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(15), { line: 1, col: 7 });
+        assert.deepEqual(lineColumn.fromIndex(15), { line: 1, col: 7 });
       });
       it("returns line-column for the line containing wide chars", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(33), { line: 3, col: 4 });
+        assert.deepEqual(lineColumn.fromIndex(33), { line: 3, col: 4 });
       });
       it("returns line-column for the last line", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(43), { line: 4, col: 7 });
+        assert.deepEqual(lineColumn.fromIndex(43), { line: 4, col: 7 });
       });
       it("returns line-column for the last character", function () {
-        assert.deepStrictEqual(lineColumn.fromIndex(48), { line: 4, col: 12 });
+        assert.deepEqual(lineColumn.fromIndex(48), { line: 4, col: 12 });
       });
 
       it("returns null for an index < 0", function () {
