@@ -18,6 +18,9 @@
     "position"
   ],
   "main": "lib/line-column.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "gulp test",
     "watch": "gulp watch",
