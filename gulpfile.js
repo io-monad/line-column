@@ -9,7 +9,7 @@ var coveralls = require("gulp-coveralls");
 gulp.task("default", ["coverage"]);
 
 gulp.task("watch", function () {
-  gulp.watch(["lib/**", "test/**"], ["test-no-coverage"]);
+  gulp.watch(["lib/**", "test/**"], ["test"]);
 });
 
 gulp.task("test", function () {
