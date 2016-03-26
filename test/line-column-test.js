@@ -174,6 +174,9 @@ describe("LineColumnFinder", function () {
       it("returns an index for the last line", function () {
         assert(lineColumn.toIndex(4, 7) === 43);
       });
+      it("returns an index for the first character", function () {
+        assert(lineColumn.toIndex(0, 0) === 0);
+      });
       it("returns an index for the last character", function () {
         assert(lineColumn.toIndex(4, 12) === 48);
       });
@@ -189,6 +192,15 @@ describe("LineColumnFinder", function () {
       });
       it("accepts an Array of [ line, col ]", function () {
         assert(lineColumn.toIndex([1, 7]) === 15);
+      });
+      it("returns an index for { line: 0, col: 0 }", function () {
+        assert(lineColumn.toIndex({ line: 0, col: 0 }) === 0);
+      });
+      it("returns an index for { line: 0, column: 0 }", function () {
+        assert(lineColumn.toIndex({ line: 0, column: 0 }) === 0);
+      });
+      it("returns an index for [ 0, 0 ]", function () {
+        assert(lineColumn.toIndex([0, 0]) === 0);
       });
 
       it("returns -1 for line < 0", function () {
