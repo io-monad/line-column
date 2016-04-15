@@ -1,4 +1,0 @@
-sudo: false
-language: node_js
-script: gulp coverage
-after_success: gulp coveralls
