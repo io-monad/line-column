@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "test": "gulp test",
+    "test-ci": "gulp test-ci",
     "watch": "gulp watch",
     "benchmark": "node benchmark/benchmark.js"
   },

@@ -33,7 +33,7 @@ gulp.task("coverage", ["pre-coverage"], function (cb) {
     .on("end", function () { cb(mochaError) });
 });
 
-gulp.task("coveralls", function () {
+gulp.task("test-ci", ["coverage"], function () {
   return gulp.src("coverage/lcov.info")
     .pipe(coveralls());
 });
