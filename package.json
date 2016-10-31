@@ -28,7 +28,7 @@
     "benchmark": "node benchmark/benchmark.js"
   },
   "devDependencies": {
-    "benchmark": "^2.1.0",
+    "benchmark": "^2.1.2",
     "find-line-column": "^0.5.2",
     "gulp": "^3.9.1",
     "gulp-coveralls": "^0.1.4",
