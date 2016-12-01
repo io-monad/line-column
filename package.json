@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "isarray": "^1.0.0",
-    "isobject": "^2.0.0"
+    "isobject": "^3.0.0"
   }
 }
